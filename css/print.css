@@ -1,0 +1,8 @@
+div#header, div#sidebar, div#footer ,  #content_back, #printBtn , nav, table , ul , li { display: none; }       
+
+ #content {
+    margin-left: 0px; 
+    margin-right: 0px; 
+    border-right-width: 0px; /* Толщина линии */
+    border-left-width: 0px; /* Толщина линии */
+ }

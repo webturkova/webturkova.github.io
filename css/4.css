@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans'), local('PTSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/yrzXiAvgeQQdopyG8QSg8Q.woff) format('woff');
+}
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PT Sans Bold'), local('PTSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/g46X4VH_KHOWAAa-HpnGPhsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('PT Sans Italic'), local('PTSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/7dSh6BcuqDLzS2qAASIeuj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v5/lILlYDvubYemzYzN7GbLkIraN7vELC11_xip9Rz-hMs.woff) format('woff');
+}
+.top-menu {
+    margin-left: 10%; 
+    margin-right: 10%;
+
+  position: relative; 
+  background: #fff;
+  box-shadow: inset 0 0 10px #ccc;
+}
+.top-menu:before,
+.top-menu:after {
+  content: "";
+  display: block;
+  height: 1px;
+  border-top: 3px solid #8fa09b;
+  border-bottom: 1px solid #8fa09b;
+  margin-bottom: 2px;
+}
+.top-menu:after {
+  border-bottom: 3px solid #8fa09b;
+  border-top: 1px solid #8fa09b;
+  box-shadow: 0 2px 7px #ccc;
+  margin-top: 2px;
+}
+.menu-main {
+  list-style: none;
+  padding: 0 30px;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.menu-main:before,
+.menu-main:after {
+  content: "\25C8";
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-main:before {left: 15px;}
+.menu-main:after {right: 15px;}
+.menu-main li {
+  display: inline-block;
+  padding: 5px 0;
+}
+.menu-main a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 6px 15px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  color: #777777;
+  border-bottom: 1px solid transparent;
+  transition: .3s linear;
+}
+.menu-main .current, .menu-main a:hover {
+  border-radius: 3px;
+  background: #f3ece1;
+  color: #313131;
+  text-shadow: 0 1px 0 #fff;
+  border-color: #c6c6c6;
+}
+@media (max-width: 500px) {
+  .menu-main li {display: block;}
+}
+ body {
+    background-image: url(../images/46.png);/* Путь к фоновому рисунку */
+    background-repeat: repeat; /* Повторяем фон */
+   }
+   
+html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+}
+   #container {
+	position: relative;
+    min-height: 100%;
+		overflow: hidden; /* Добавляем полосы прокрутки */
+
+
+   }
+   #header {
+	background: url(../images/46.png);/* Путь к фоновому рисунку */
+    background-repeat: repeat; /* Повторяем фон */
+	min-height: 55px;
+	margin-left: 10%;
+    margin-right: 10%; 
+  font-family: 'PT Sans', sans-serif;
+	font-size: 2.5em; /* Размер текста */
+    text-align: center; /* Выравнивание по центру */
+   }
+   #sidebar {
+    width: 110px; /* Ширина слоя */
+    padding: 0 10px; /* Отступы вокруг текста */
+    float: left; /* Обтекание по правому краю */
+   }
+  #content {
+	
+	background: #ffffff; /* Цвет фона шапки */
+    padding-bottom: 20px; /* Значение должно равняться высоте нашего футера */
+    margin-left: 10%; 
+    margin-right: 10%; 
+	border-right-color: #8fa09b; /* Цвет линии справа */
+    border-right-style: double; /* Стиль линии */
+    border-right-width: 10px; /* Толщина линии */
+    border-left-color: #8fa09b; /* Цвет линии слева */
+    border-left-style: double; /* Стиль линии */
+    border-left-width: 10px; /* Толщина линии */
+    padding: 10px 10px; /* Расстояние между линией и текстом */
+	margin-bottom: 10px; /* Отступ снизу */
+
+   } 
+   
+ 
+   .clear {
+    clear: both;
+   }
+ #content_back {
+    height: 100%; /* высота псевдоколонок */
+    height: expression(document.body.offsetHeight); /* высота для IE6 */
+    position: absolute; /* абсолютное позиционирование */
+    top: 0; /* нулево смещение от верха обертки */
+    z-index: -1; /* отрицательное значение z-index */
+   }
+   #content_back {
+    background: #ffffff; /* Цвет фона шапки */
+    left: 10%; 
+    right: 10%; 
+	border-right-color: #8fa09b; /* Цвет линии справа */
+    border-right-style: double; /* Стиль линии */
+    border-right-width: 10px; /* Толщина линии */
+    border-left-color: #8fa09b; /* Цвет линии слева */
+    border-left-style: double; /* Стиль линии */
+    border-left-width: 10px; /* Толщина линии */
+   }
+   #footer {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: #8fa09b;
+   text-align:center;
+
+   } 
+   div {
+  font-family: 'PT Sans', sans-serif;
+   } 
+   
+ p{
+	     margin-top: 0; /* Отступ сверху */
+	 text-align: justify;
+ }
+   
+ A {
+    color: black; /* Цвет ссылок */
+   }
+   A:visited {
+    color: black; /* Цвет посещенных ссылок */
+   }
+   A:active {
+    color: black; /* Цвет активных ссылок */
+   }
+   
+   table {
+    margin: 0 0 5px 20px; /* Отступы вокруг картинки */
+   }
+
+a.button15 {
+  width: 82px;
+  height: 20px;
+  padding: 6px  5px;
+  -webkit-border-radius: 2px 2px;
+  border: solid 1px rgb(153, 153, 153);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 255, 255)), to(rgb(221, 221, 221)));
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(255,255,255,1);
+    font-family: arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+a.button15:hover {
+  color: rgb(24,24,24);
+  border: 1px solid rgb(198,198,198);
+  background: #f7f7f7 linear-gradient(#f7f7f7, #f1f1f1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+a.button15:active {
+  color: rgb(51,51,51);
+  border: 1px solid rgb(204,204,204);
+  background: rgb(238,238,238) linear-gradient(rgb(238,238,238), rgb(224,224,224));
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+} 
+table.button {
+	padding: 0 0 20px 0; /* Поля вокруг текста */ 
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+}
+/*-----------------------------------------------------------------------------------*/
+/*	Слайдер карусель
+/*-----------------------------------------------------------------------------------*/
+
+#wrapper .d-carousel ul li {
+	background: none;
+	background-color: #FFF;
+	-webkit-box-shadow: 0px 1px 2px 0px #b7b7b7;
+	-moz-box-shadow: 0px 1px 2px 0px #b7b7b7;
+	box-shadow: 0px 1px 2px 0px #b7b7b7; 
+	padding: 15px;
+	width: 175px;
+}
+
+.jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.d-carousel h4 {
+	margin: 5px 0 5px 0;
+}
+
+.d-carousel .jcarousel-container {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.d-carousel .jcarousel-item {
+	width: 170px;
+	height: 180px;
+}
+
+.d-carousel .jcarousel-container-horizontal {
+	max-width: 770px;
+	max-height: 200px;
+	padding: 0 45px;
+}
+
+.d-carousel .jcarousel-item-horizontal {
+	margin-left: 1px;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	margin-right: 15px;
+}
+
+.d-carousel .jcarousel-next-horizontal {
+	position: absolute;
+	top: 89px;
+	right: 0;
+	margin-right: 3px;
+	width: 15px;
+	height: 28px;
+	cursor: pointer;
+	background: transparent url(../images/blog-arrows.jpg) no-repeat top right;
+}
+
+.d-carousel .jcarousel-direction-rtl .jcarousel-next-horizontal {
+	left: 5px;
+	right: auto;
+	background-image: url(../images/blog-arrows.jpg);
+}
+
+.d-carousel .jcarousel-next-horizontal:hover {
+	background-position: bottom right;
+}
+
+.d-carousel .jcarousel-prev-horizontal {
+	position: absolute;
+	top: 89px;
+	left: 0;
+	margin-left: 3px;
+	width: 15px;
+	height: 28px;
+	cursor: pointer;
+	background: transparent url(../images/blog-arrows.jpg) no-repeat top left;
+}
+
+.d-carousel .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+	left: auto;
+	right: 5px;
+	background-image: url(../images/blog-arrows.jpg);
+}
+
+.d-carousel .jcarousel-prev-horizontal:hover {
+	background-position: bottom left;
+}
+
